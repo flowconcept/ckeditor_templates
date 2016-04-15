@@ -1,0 +1,9 @@
+{
+    "name": "flowconcept/ckeditor_templates",
+    "version": "master",
+    "type": "drupal-module",
+    "soure": {
+        "url": "git@github:flowconcept/ckeditor_templates.git",
+        "type": "git"
+    }
+}
