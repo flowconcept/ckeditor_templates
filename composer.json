@@ -1,9 +1,8 @@
 {
     "name": "flowconcept/ckeditor_templates",
+    "description": "Adds the Content Templates plugin to Drupal",
     "version": "master",
     "type": "drupal-module",
-    "soure": {
-        "url": "git@github:flowconcept/ckeditor_templates.git",
-        "type": "git"
-    }
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
 }
