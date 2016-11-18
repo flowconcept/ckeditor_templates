@@ -35,10 +35,19 @@ class Templates extends CKEditorPluginBase {
     $settings = $editor->getSettings();
     $path = drupal_get_path('module', 'ckeditor_templates');
 
+    $base_theme = drupal_get_path('theme', \Drupal::service('theme_handler')->getDefault());
+    $file = $base_theme . '/ckeditor/templates.js';
+
+    if (file_exists($file)) {
+      $template_file = Url::fromUri('base:' . $file, ['absolute' => TRUE])->toString();
+    } else {
+      $template_file = Url::fromUri('base:' . $path . '/templates/default.js', ['absolute' => TRUE])->toString();
+    }
+
     return array(
       'templates' => 'default',
       'templates_files' => [
-        Url::fromUri('base:' . $path . '/templates/default.js', ['absolute' => TRUE])->toString()
+        $template_file
       ],
       'templates_replaceContent' => FALSE,
     );
@@ -56,3 +65,19 @@ class Templates extends CKEditorPluginBase {
     );
   }
 }
+
+///**
+// * {@inheritdoc}
+// */
+//public function getConfig(Editor $editor) {
+//  $settings = $editor->getSettings();
+//  $path = drupal_get_path('module', 'ckeditor_templates');
+//
+//  return array(
+//    'templates' => 'default',
+//    'templates_files' => [
+//      Url::fromUri('base:' . $path . '/templates/default.js', ['absolute' => TRUE])->toString()
+//    ],
+//    'templates_replaceContent' => FALSE,
+//  );
+//}
