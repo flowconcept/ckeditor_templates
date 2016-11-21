@@ -65,19 +65,3 @@ class Templates extends CKEditorPluginBase {
     );
   }
 }
-
-///**
-// * {@inheritdoc}
-// */
-//public function getConfig(Editor $editor) {
-//  $settings = $editor->getSettings();
-//  $path = drupal_get_path('module', 'ckeditor_templates');
-//
-//  return array(
-//    'templates' => 'default',
-//    'templates_files' => [
-//      Url::fromUri('base:' . $path . '/templates/default.js', ['absolute' => TRUE])->toString()
-//    ],
-//    'templates_replaceContent' => FALSE,
-//  );
-//}
