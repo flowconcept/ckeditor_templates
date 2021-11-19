@@ -2,6 +2,7 @@ name: CKEditor Content Templates
 type: module
 description: "Adds the Content Templates plugin to CKEditor."
 package: Other
+core_version_requirement: ^8 || ^9
 core: 8.x
 
 dependencies:
